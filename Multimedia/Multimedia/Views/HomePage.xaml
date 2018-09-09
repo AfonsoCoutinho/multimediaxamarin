@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Multimedia.Views.HomePage"
+             Title="{Binding SelectedCourse.Name}">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout>
+                <Image Source="logo_multimedia.jpg" />
+                <StackLayout Padding="20,20">
+                    <Label Text="{Binding SelectedCourse.Description}" />
+                    <Label Text="Objetivos"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               BackgroundColor="#2196F3"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               HeightRequest="25"/>
+                    <Label Text="{Binding SelectedCourse.ObjectivesDescription}"
+                               FontSize="Small"
+                               HorizontalOptions="FillAndExpand"/>
+                    
+                    <ListView x:Name="ListObjectives"
+                              ItemsSource="{Binding SelectedCourse.Objectives}"
+                              Margin="0,5"
+                              IsEnabled="False"
+                              RowHeight="60">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding Description, StringFormat='• {0}'}"
+                                           Margin="0,5"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Label Text="Saídas Profissionais"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               BackgroundColor="#2196F3"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               HeightRequest="25"/>
+                    
+                    <Label Text="{Binding SelectedCourse.CareersDescription}"
+                               FontSize="Small"
+                               HorizontalOptions="StartAndExpand"/>
+                    
+                    <ListView x:Name="ListCareers"
+                              ItemsSource="{Binding SelectedCourse.Careers}"
+                              Margin="0,5"
+                              IsEnabled="False"
+                              RowHeight="30">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding Description, StringFormat='• {0}'}"
+                                           Margin="0,5"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Label Text="Contatos"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               BackgroundColor="#2196F3"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"
+                               HeightRequest="25"/>
+
+                    <ListView x:Name="ListContacts"
+                              ItemsSource="{Binding SelectedCourse.Contacts}"
+                              Margin="0,5"
+                              IsEnabled="False"
+                              RowHeight="80">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Label Text="{Binding Type}" TextColor="#2196F3"/>
+                                        <Label Text="{Binding Name}"/>
+                                        <Label Text="{Binding Email}"/>
+                                    </StackLayout>
+                                    
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

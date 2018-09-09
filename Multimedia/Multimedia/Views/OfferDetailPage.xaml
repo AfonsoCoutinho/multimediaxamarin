@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Multimedia.Views.OfferDetailPage"
+             Title="{Binding OfferName}">
+    <ContentPage.Content>
+        <StackLayout Padding="20,20">
+            <FlexLayout JustifyContent="SpaceBetween">
+                <Label Text="{Binding OfferType}"  TextColor="#2196F3" />
+                <Label Text="{Binding OfferDate}" />
+            </FlexLayout>
+            <Label Text="{Binding OfferDescription}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

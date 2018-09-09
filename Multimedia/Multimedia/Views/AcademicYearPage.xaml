@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Multimedia.Views.AcademicYearPage"
+             Title="{Binding TabName}">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"
+                    JustifyContent="Start"
+                    Margin="10,5">
+            <ListView x:Name="ListViewSubjectsFirstSemester"
+                      ItemsSource="{Binding SubjectsFirstSemester}">
+                <ListView.Header>
+                    <FlexLayout JustifyContent="SpaceBetween"
+                                        AlignItems="Center"
+                                        BackgroundColor="#2196F3"
+                                        HeightRequest="30">
+                        <Label Text="1º Semestre"
+                                        TextColor="White"
+                                        Margin="5,10" />
+                        <Label Text="ECTS"
+                                        FontSize="Small"
+                                        TextColor="White"
+                                        Margin="5,10"/>
+                    </FlexLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout JustifyContent="SpaceBetween"
+                                                AlignItems="Center"
+                                                HeightRequest="30">
+                                <Label Text="{Binding Name}" Margin="5,10" />
+                                <Label Text="{Binding ECTS}" Margin="5,10" />
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="ListViewSubjectsSecondSemester"
+                      ItemsSource="{Binding SubjectsSecondSemester}">
+                <ListView.Header>
+                    <FlexLayout JustifyContent="SpaceBetween"
+                                        AlignItems="Center"
+                                        BackgroundColor="#2196F3"
+                                        HeightRequest="30">
+                        <Label Text="2º Semestre"
+                                        TextColor="White"
+                                        Margin="5,10" />
+                        <Label Text="ECTS"
+                                        FontSize="Small"
+                                        TextColor="White"
+                                        Margin="5,10"/>
+                    </FlexLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout JustifyContent="SpaceBetween"
+                                                AlignItems="Center"
+                                                HeightRequest="30">
+                                <Label Text="{Binding Name}" Margin="5,10" />
+                                <Label Text="{Binding ECTS}" Margin="5,10" />
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
