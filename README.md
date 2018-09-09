@@ -1,12 +1,12 @@
 # multimediaxamarin
 Xamarin
 
-# Identificação Alunoi
+# Identificação Aluno
 Afonso Luís dos Santos Coutinho
 afonso.coutinho10@hotmail.com
 nº 9750
 
-# Identificação do instituto e licenciatura
+# Identificação do Instituto e Licenciatura
 Instituto Superior Miguel Torga, licenciatura Multimédia
 
 # Identificação da Unidade Curricular
